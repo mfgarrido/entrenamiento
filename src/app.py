@@ -7,14 +7,14 @@ app = Flask(__name__)
 
 def ping():
     #leo datos y convierto a json
-    content = request.get_json();
+    data = request.get_json();
     
     #genero una condicion para saber si el contenido del json es 
     #ping para luego responder ping
     
     #jsonify -> convertir datos en diccionarios
     
-    if content and content.get('content') == 'ping':
+    if data and data.get('data') == 'ping':
         return jsonify({'response': 'Pong'}),200
     else:
         #valido si el imput es valido o no
