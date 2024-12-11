@@ -15,7 +15,7 @@ def ping():
     #jsonify -> convertir datos en diccionarios
     
     if content and content.get('content') == 'ping':
-        return jsonify({'response': 'Pong'})
+        return jsonify({'response': 'Pong'}),200
     else:
         #valido si el imput es valido o no
         return jsonify({'error': 'Input Inválido'}),400
